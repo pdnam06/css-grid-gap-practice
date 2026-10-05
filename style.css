@@ -1,0 +1,40 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; color: #53657a; background: #eef3f8; line-height: 1.6; }
+main { width: calc(100% - 32px); max-width: 900px; margin: 48px auto; }
+header { margin-bottom: 30px; }
+.eyebrow { color: #2563eb; font-weight: 700; font-size: 11px; letter-spacing: 2px; }
+h1 { color: #17324d; font-size: clamp(30px, 5vw, 44px); margin: 8px 0 12px; line-height: 1.2; }
+header > p:last-child { margin: 0; }
+.example { margin: 24px 0; padding: 30px; background: white; border: 1px solid #dbe5ef; border-radius: 14px; }
+.example-heading { display: flex; align-items: flex-start; gap: 16px; }
+.number { display: inline-block; padding: 8px 12px; border-radius: 8px; color: #2563eb; background: #eff6ff; font-weight: 800; }
+h2 { margin: 0 0 5px; color: #17324d; font-size: 22px; line-height: 1.3; }
+.example-heading p { margin: 0; font-size: 13px; }
+pre { padding: 16px; border-radius: 8px; background: #17324d; color: #d2eaff; font-size: 13px; overflow: auto; }
+code { font-family: Consolas, monospace; }
+/* Ví dụ 1: 20px cho cả hàng và cột. */
+.equal-gap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.equal-gap > div { background-color: lightblue; }
+/* Ví dụ 2: 30px giữa các hàng và 10px giữa các cột. */
+.different-gap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px 10px;
+}
+.different-gap > div { background-color: lightgreen; }
+.grid-container { margin-top: 24px; }
+.grid-container > div { padding: 20px; text-align: center; color: #17324d; font-weight: 700; }
+.explanation { margin: 22px 0 0; font-size: 14px; }
+.explanation code, footer code { padding: 2px 5px; background: #e8eff7; border-radius: 4px; color: #2563eb; }
+footer { padding: 16px 0; font-size: 13px; }
+@media (max-width: 500px) {
+    main { margin-top: 28px; }
+    .example { padding: 18px; }
+    .example-heading { gap: 10px; }
+    h2 { font-size: 18px; }
+    .grid-container > div { padding: 20px 8px; }
+}

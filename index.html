@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS grid-gap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <p class="eyebrow">BÀI THỰC HÀNH CSS GRID</p>
+            <h1>Khoảng cách với grid-gap</h1>
+            <p>Hai ví dụ minh họa cách tạo khoảng trống giữa các hàng và cột.</p>
+        </header>
+
+        <section id="example-one" class="example">
+            <div class="example-heading">
+                <span class="number">01</span>
+                <div><h2>Khoảng cách hàng và cột bằng nhau</h2><p>Lưới 2 cột, 4 ô · Hàng: 20px · Cột: 20px</p></div>
+            </div>
+            <pre><code>grid-template-columns: repeat(2, 1fr);
+grid-gap: 20px;</code></pre>
+            <div class="grid-container equal-gap" aria-label="Ví dụ 1: lưới hai cột với khoảng cách 20px">
+                <div>Ô 1</div>
+                <div>Ô 2</div>
+                <div>Ô 3</div>
+                <div>Ô 4</div>
+            </div>
+            <p class="explanation">Một giá trị <code>20px</code> áp dụng cho cả khoảng cách hàng và khoảng cách cột.</p>
+        </section>
+
+        <section id="example-two" class="example">
+            <div class="example-heading">
+                <span class="number">02</span>
+                <div><h2>Khoảng cách hàng và cột khác nhau</h2><p>Lưới 3 cột, 6 ô · Hàng: 30px · Cột: 10px</p></div>
+            </div>
+            <pre><code>grid-template-columns: repeat(3, 1fr);
+grid-gap: 30px 10px;</code></pre>
+            <div class="grid-container different-gap" aria-label="Ví dụ 2: lưới ba cột với khoảng cách hàng 30px và cột 10px">
+                <div>Ô 1</div>
+                <div>Ô 2</div>
+                <div>Ô 3</div>
+                <div>Ô 4</div>
+                <div>Ô 5</div>
+                <div>Ô 6</div>
+            </div>
+            <p class="explanation">Giá trị đầu tiên <code>30px</code> dành cho hàng; giá trị thứ hai <code>10px</code> dành cho cột.</p>
+        </section>
+
+        <footer>Có thể dùng <code>gap</code> thay cho <code>grid-gap</code> với cùng thứ tự giá trị: hàng trước, cột sau.</footer>
+    </main>
+</body>
+</html>
